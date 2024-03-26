@@ -78,7 +78,7 @@ function Register() {
 
                                         </div>
                                         <button className="btn btn-primary btn-user btn-block" onClick={AddUser}>
-                                            Register Account
+                                            Register Account x
                                         </button>
                                         <hr />
                                         <a href="index.html" className="btn btn-google btn-user btn-block">
