@@ -9,7 +9,7 @@ const root = createRoot(rootElement);
 
 
 
-const Navbar = ({ onMainClick, onAdminClick, onAllClick }) => {
+const Navbar = ({ onMainClick, onAdminClick, onAllClick, onUserLoginClick, onUserRegisterClick }) => {
     return (
 
         <nav className="navbar">
@@ -34,12 +34,13 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick }) => {
                     </span>{" "}
                     Admin
                 </li>
-                <li className="log">
+               
+                <li onClick={onUserLoginClick} className="log">
                     LOGIN
                 </li>
                 <div className="vl"></div>
                 <div className="vl" style={{ marginLeft: '2px' }}></div>
-                <li className="reg">
+                <li onClick={onUserRegisterClick} className="reg">
                     REGISTER
                 </li>
             </ul>

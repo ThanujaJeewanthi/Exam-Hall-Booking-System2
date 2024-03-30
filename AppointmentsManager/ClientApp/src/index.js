@@ -31,6 +31,14 @@ const App = () => {
         window.location.href = '/adminLogin';
     };
 
+    const handleUserLoginClick = () => {
+        window.location.href = '/login';
+    };
+
+    const handleUserRegisterClick = () => {
+        window.location.href = '/register';
+    };
+
     return (
         <Router>
             <div>
@@ -39,6 +47,8 @@ const App = () => {
                     onMainClick={handleMainClick}
                     onAllClick={handleAllClick}
                     onAdminClick={handleAdminClick}
+                    onUserLoginClick={handleUserLoginClick}
+                    onUserRegisterClick={handleUserRegisterClick}
                 />
                 <Routes>
                     <Route path="/main" element={<MainHome />} />
