@@ -18,20 +18,20 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick }) => {
             <ul>
                 <li onClick={onMainClick}>
                     <span role="img" aria-label="User Icon">
-                        👤
+                        
                     </span>{" "}
                     Home
                 </li>
                 <li onClick={onAllClick}>
                     <span role="img" aria-label="User Icon">
-                        👤
+                        
                     </span>{" "}
                     All Booking
                 </li>
                 <div className="admin">
                 <li onClick={onAdminClick}>
                     <span role="img" aria-label="Admin Icon">
-                        👑
+                        
                     </span>{" "}
                     Admin
                 </li>

@@ -21,10 +21,56 @@ export default function Home(props) {
     let name_ = e.target.name;
     let v_ = e.target.value;
 
-    if (name_ === "All" || name_ === "Done" || name_ === "Deleted") {
-      v_ = e.target.checked;
-      filter[name_] = v_;
-    }
+
+      if (name_ === "All" || name_ === "Done" || name_ === "Deleted") {
+          v_ = e.target.checked;
+          filter[name_] = v_;
+
+          if (name_ === "SpecifiedDate") {
+              filter.SpecifiedDate = new Date(v_);
+              filter.StartDate = null
+              filter.EndDate = null
+          }
+
+          if (name_ === "SpecifiedTime") {
+              filter.SpecifiedTime = v_;
+          }
+
+          if (name_ === "LevelOfImportance") {
+              filter.LevelOfImportance = Number(v_) === 9 ? null : Number(v_);
+          }
+
+          if (name_ === "period") {
+              // 1 = today, 2 = this week, 3 = last week
+              let sd_ = new Date(), ed_ = new Date();
+              const dayNum = sd_.getDay();
+
+              if (v_ === "1") {
+                  sd_.setDate(dayNum - 1)
+              }
+
+              if (v_ === "2") {
+                  let startDaysInSec = (dayNum - 1) * 24 * 60 * 60 * 1000;
+                  let endDaysInSec = (7 - dayNum) * 24 * 60 * 60 * 1000;
+
+                  sd_ = new Date(Date.now() - startDaysInSec);
+                  ed_ = new Date(Date.now() + endDaysInSec);
+              }
+
+              if (v_ === "3") {
+                  let startDaysInSec = dayNum * 24 * 60 * 60 * 1000;
+                  let endDaysInSec = (6 + dayNum) * 24 * 60 * 60 * 1000;
+
+                  ed_ = new Date(Date.now() - startDaysInSec);
+                  sd_ = new Date(Date.now() - endDaysInSec);
+              }
+
+              filter.StartDate = v_ === '4' ? null : sd_;
+              filter.EndDate = v_ === '4' ? null : ed_;
+              filter.SpecifiedDate = null
+          }
+
+      }
 
     if (name_ === "period") {
       // 1 = today, 2 = this week, 3 = last week
@@ -154,6 +200,7 @@ export default function Home(props) {
                           <option value={2}>Quiz</option>
                           <option value={1}>Mid Exam</option>
                           <option value={0}>End Exam</option>
+                          
             </select>
           </div>
         </div>

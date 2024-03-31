@@ -44,6 +44,7 @@ h1 {
     box-shadow: 0 0 2px 2px rgb(65, 106, 195);
     padding: 5px 13px;
     color: #fff;
+    margin:5px;
 }
 
 
@@ -204,11 +205,20 @@ h1 {
     background-color: red;
     background: red;
 }
+.bc-red2 {
+    background-color: #FF033E;
+    background: #FF033E;
+}
 
 .bc-green {
     background-color: green;
     background: green;
 }
+.bc-green2 {
+    background-color: #99EDC3;
+    background: #99EDC3;
+}
+
 
 .bc-gold {
     background-color: gold;
