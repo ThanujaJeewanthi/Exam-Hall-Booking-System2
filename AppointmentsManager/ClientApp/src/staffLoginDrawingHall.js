@@ -10,7 +10,7 @@ function Login() {
     function GetLoginDetails() {
         // Define admin credentials
         const adminCredentials = [
-            { loginName: 'staff', password: 'staff123', route: '/staffGrawingHall' },
+            { loginName: 'staff', password: 'staff123', route: '/staffDrawingHall' },
       
         ];
 

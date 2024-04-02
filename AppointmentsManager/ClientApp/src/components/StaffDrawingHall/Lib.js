@@ -20,7 +20,7 @@ export const entry = {
     endTime: formatedTimeToStr(),
     done: false,
     deleted: false,
-    levelOfImportance: 2,
+    levelOfImportance: 0,
 }
 
 export const filter = {

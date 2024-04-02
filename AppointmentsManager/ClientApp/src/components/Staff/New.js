@@ -54,6 +54,9 @@ export default function New(props) {
 
         closeModal("new-modal")
         window.location.reload();
+
+        // Redirect to '/allBooking' route after post request
+   
     }
 
     return (

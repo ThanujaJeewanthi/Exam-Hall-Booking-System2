@@ -19,7 +19,7 @@ import LoginDrawingHall from './LoginDrawingHall';
 import Register from './Register';
 import AdminLogin from './adminLogin';
 import AllBookingUserDrawingHall from './components/AllBookingUserDrawingHall/Home';
-
+import StaffLoginDrawingHall from './staffLoginDrawingHall';
 import Footer from './Footer';
 
 
@@ -54,11 +54,11 @@ const App = () => {
                         <Route path="/macAdmin" element={<MacAdminHome />} />
                         <Route path="/user" element={<UserHome />} />
                         <Route path="/userDrawingHall" element={<UserDrawingHall />} />
-                      
+                        <Route path="/staffDrawingHall" element={<StaffDrawingHall />} />
                     <Route path="/login" element={<Login />} />
                         <Route path="/staff" element={<Staff />} />
                         <Route path="/loginDrawingHall" element={<LoginDrawingHall />} />
-                        <Route path="/staffDrawingHall" element={<StaffDrawingHall />} />
+                        <Route path="/staffLoginDrawingHall" element={<StaffLoginDrawingHall />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/adminLogin" element={<AdminLogin />} />
                     <Route path="/allBooking" element={<AllBooking />} />

@@ -20,7 +20,7 @@ export const entry = {
     endTime: formatedTimeToStr(),
     done: false,
     deleted: false,
-    levelOfImportance: 2,
+    levelOfImportance: 0,
 }
 
 export const filter = {
@@ -38,7 +38,7 @@ export const activeId = {
     id: 0
 }
 
-const url = "api/appointmentDrawingHall"
+const url = "api/appointment"
 
 export async function getDefault(){
     const res = await fetch(url)
