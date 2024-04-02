@@ -1,7 +1,7 @@
 import { activeId, entry, openModal } from "./Lib";
 
 
-export default function Appointment(props) {
+export default function AppointmentDrawingHall(props) {
 
     const handlingDelete = (id) =>{
         activeId.id = id
@@ -20,13 +20,14 @@ export default function Appointment(props) {
     }
 
     const levelOfImportance = ["End Exam", "Mid Exam", "Quiz", "Assignmnet", "", ""];
-    const examHall = ["Hall 01 (Admin)", "Hall 02 (Computer)"]
     return (
+        <div className="Booking_table">
         <div className={`row py-5 underline  ${props.item.deleted ? ' bc-red2' : props.item.done ? ' bc-green2' : ''}`} key={props.item.id}>
             <div className="column id">{props.item.id}</div>
-          {/*  <div className="column examHall">{props.item.examHall}</div>*/}
+                <div className="column examHall">{props.item.examHall}</div>
 
-            <div className="column examHall">{props.item.examHall}</div>
+
+
 
 
             <div className="column lectureName">{props.item.lectureName}</div>
@@ -38,15 +39,13 @@ export default function Appointment(props) {
             props.item.levelOfImportance === 2 ? ' bc-gold' : props.item.levelOfImportance === 0 ? ' bc-red' : props.item.levelOfImportance === 3 ? ' bc-blue': ''}`}>
                 {levelOfImportance[props.item.levelOfImportance]}</div>
             <div className="column date">{props.item.date.split("T")[0]}</div>
+         
             <div className="column time">{props.item.time}</div>-
             <div className="column endTime">{props.item.endTime}</div>
             <div className="column academicStaff">{props.item.academicStaff}</div>
-            <div className="column edit">
-                <div className="btn2 edit" onClick={()=> handlingEdit(props.item)}>Edit</div>
+           
             </div>
-            <div className={`column delete  ${props.item.deleted ? ' not-allowed' : ''}`}>
-                <div className={`btn2 delete ${props.item.deleted ? ' no-event' : ''}`} onClick={()=> handlingDelete(props.item.id)}>Reject</div>
-            </div>
+
         </div>
     )
 }

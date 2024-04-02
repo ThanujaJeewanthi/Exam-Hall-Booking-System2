@@ -234,15 +234,19 @@ export default function Home(props) {
         <section className="modal new-modal hidden">
           <New refreshApp={setRefreshData} />
         </section>
-
+        
+          
         <section className="modal edit-modal hidden">
           <Edit stateListener={stateListener} refreshApp={setRefreshData} />
         </section>
 
         <section className="modal delete-modal hidden">
           <Delete stateListener={stateListener} refreshApp={setRefreshData} />
-        </section>
-      </section>
+              </section>
+
+        
+          </section>
+
     </main>
   )
 }

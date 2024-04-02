@@ -9,7 +9,7 @@ const root = createRoot(rootElement);
 
 
 
-const Navbar = ({ onMainClick, onAdminClick, onAllClick }) => {
+const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) => {
     return (
 
         <nav className="navbar">
@@ -22,11 +22,17 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick }) => {
                     </span>{" "}
                     Home
                 </li>
+                <li onClick={onDrawingHallClick}>
+                    <span role="img" aria-label="User Icon">
+
+                    </span>{" "}
+                    Drawing Hall
+                </li>
                 <li onClick={onAllClick}>
                     <span role="img" aria-label="User Icon">
                         
                     </span>{" "}
-                    All Booking
+                    Computer Department Hall
                 </li>
                 <div className="admin">
                 <li onClick={onAdminClick}>

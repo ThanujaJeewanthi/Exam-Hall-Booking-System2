@@ -1,5 +1,5 @@
 ﻿
-body {
+/*body {
     background-color: #f8f9fc;
 }
 
@@ -28,24 +28,24 @@ body {
 
     .btn-user:hover {
         background-color: #2e59d9;
-    }
+    }*/
 
 /*.bg-register-image {
     background: url('path/to/register-image.jpg') center / cover;
 }*/
 
-.form-control-user {
+/*.form-control-user {
     border-radius: 25px;
-}
+}*/
 
 /* Common Styles */
-.text-center {
+/*.text-center {
     text-align: center;
 }
 
 .small {
-    font-size: 14px;
-}
+    font-size: 14px;*//**/
+/*}
 
 .link {
     color: #4e73df;
@@ -53,4 +53,4 @@ body {
 
     .link:hover {
         color: #2e59d9;
-    }
+    }*/

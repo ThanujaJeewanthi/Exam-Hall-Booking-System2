@@ -153,7 +153,7 @@ export default function Home(props) {
           <br></br>
           <br></br>
           <div className="centered-heading">
-              <h1>All Exams</h1>
+              <h1>Computer Department All Exams</h1>
           </div>
 
           <br></br>
@@ -262,15 +262,16 @@ export default function Home(props) {
       <section>
         <section className="modal new-modal hidden">
           <New refreshApp={setRefreshData} />
-        </section>
-
+              </section>
+              <div className="block">
         <section className="modal edit-modal hidden">
           <Edit stateListener={stateListener} refreshApp={setRefreshData} />
         </section>
 
         <section className="modal delete-modal hidden">
           <Delete stateListener={stateListener} refreshApp={setRefreshData} />
-        </section>
+                  </section>
+              </div>
       </section>
     </main>
   )

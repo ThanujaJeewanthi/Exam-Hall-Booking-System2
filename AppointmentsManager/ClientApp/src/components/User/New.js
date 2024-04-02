@@ -60,7 +60,7 @@ export default function New(props) {
         <div className="modal-container">
         <div className="modal-title">New End Exam Booking</div>
         <br></br>
-        <div className="mt-15">
+ {/*       <div className="mt-15">
             <label htmlFor="Hall_n" >Exam Hall  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;    :</label>
             <select className="mt-5" id="Hall_n" name="examHall" onChange={newApp} defaultValue={0} >
 
@@ -70,7 +70,7 @@ export default function New(props) {
 
             </select>
 
-        </div>
+        </div>*/}
         <br></br>
         <div className="mt-15">
             <label htmlFor="LectureName_n">Lecturer Name&nbsp; :</label>
@@ -78,14 +78,14 @@ export default function New(props) {
 
         </div>
 
-        <div className="row mt-25">
+   {/*     <div className="row mt-25">
             <div>
                 <label htmlFor="AcademicStaff_n" >
                     Non  Academic   &nbsp;:</label>
                 <input type="text" id="AcademicStaff_n" name="academicStaff" onChange={newApp} maxLength={50} /><br></br>
                 <label>Staff Member</label>
             </div>
-        </div>
+        </div>*/}
         <br></br>
 
         <div className="ms-10">

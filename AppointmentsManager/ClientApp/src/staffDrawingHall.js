@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './adminLogin.css'; // Import the CSS file
+import './login_rejister.css'; // Import the CSS file
 
 function Login() {
     const [loginName, setLoginName] = useState('');
@@ -10,8 +10,8 @@ function Login() {
     function GetLoginDetails() {
         // Define admin credentials
         const adminCredentials = [
-            { loginName: 'ar admin', password: 'arAdmin123', route: '/admin' },
-            { loginName: 'mac admin', password: 'macAdmin123', route: '/macAdmin' }
+            { loginName: 'staff', password: 'staff123', route: '/staffGrawingHall' },
+      
         ];
 
         // Check if entered credentials match any admin credentials
@@ -38,7 +38,7 @@ function Login() {
                                     <div className="col-lg-6">
                                         <div className="p-5">
                                             <div className="text-center">
-                                                <h1 className="h4 text-gray-900 mb-4">Admin Login</h1>
+                                                <h1 className="h4 text-gray-900 mb-4">Staff Login</h1>
                                             </div>
                                             <div className="user">
                                                 <div className="form-group">
@@ -58,6 +58,7 @@ function Login() {
 
                                             </div>
                                             <hr />
+
 
                                         </div>
                                     </div>

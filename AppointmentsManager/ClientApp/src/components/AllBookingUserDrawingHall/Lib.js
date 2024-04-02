@@ -8,13 +8,13 @@ export const testData = [
 
 
 export const entry = {
-    examHall: "Com Hall",
+    examHall: "Test hall",
     lectureName: "Test Lecture Name",
     numOfStudent: 5,
     year: 1,
     semester: 2,
     subject:"EC1020",
-    academicStaff: " ",
+    academicStaff: "Test address",
     date: new Date(),
     time: formatedTimeToStr(),
     endTime: formatedTimeToStr(),
@@ -38,7 +38,7 @@ export const activeId = {
     id: 0
 }
 
-const url = "api/appointment"
+const url = "api/appointmentDrawingHall"
 
 export async function getDefault(){
     const res = await fetch(url)
@@ -53,7 +53,7 @@ export async function getDefault(){
     return result
 }
 
-export async function getAppointments(filter_){
+export async function getAppointmentsDrawingHall(filter_){
     const res = await fetch(url + "/filters",{
         method: "POST",
         body: JSON.stringify(filter_),
@@ -71,7 +71,7 @@ export async function getAppointments(filter_){
     return await res.json()
 }
 
-export async function postAppointment(newApp){
+export async function postAppointmentDrawingHall(newApp){
     const res = await fetch(url,{
         method: "POST",
         body: JSON.stringify(newApp),
@@ -89,7 +89,7 @@ export async function postAppointment(newApp){
     return await res.json()
 }
 
-export async function updateAppointment(updateApp){
+export async function updateAppointmentDrawingHall(updateApp){
     const res = await fetch(url + "/" + updateApp.id,{
         method: "PUT",
         body: JSON.stringify(updateApp),
@@ -107,7 +107,7 @@ export async function updateAppointment(updateApp){
     return res
 }
 
-export async function deleteAppointment(id){
+export async function deleteAppointmentDrawingHall(id){
     const res = await fetch(url + "/" + id, {
         method: "DELETE"
     })

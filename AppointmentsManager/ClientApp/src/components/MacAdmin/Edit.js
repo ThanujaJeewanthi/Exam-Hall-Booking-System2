@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { closeModal, entry, updateAppointment } from "./Lib"
+import { closeModal, entry, updateAppointmentDrawingHall } from "./Lib"
 
 export default function Edit(props){
 
@@ -35,7 +35,7 @@ export default function Edit(props){
     }
 
     const updateApp = ()=>{
-        updateAppointment(entry).then(r =>{
+        updateAppointmentDrawingHall(entry).then(r =>{
             console.log("Updated successfully: ", r)
             props.refreshApp(Math.random() * 248 * Math.random())
         })

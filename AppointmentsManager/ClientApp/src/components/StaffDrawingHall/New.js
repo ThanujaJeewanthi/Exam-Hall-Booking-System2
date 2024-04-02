@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { closeModal, entry, formatedDateToStr, formatedTimeToStr, postAppointment } from "./Lib"
+import { closeModal, entry, formatedDateToStr, formatedTimeToStr, postAppointmentDrawingHall } from "./Lib"
 export default function New(props) {
 
     const [titleLength, setTitleLength] = useState(0)
@@ -48,7 +48,7 @@ export default function New(props) {
     }
 
     const postApp = () => {
-        postAppointment(entry).then(r => {
+        postAppointmentDrawingHall(entry).then(r => {
             props.refreshApp(Math.random() * 125 * Math.random())
         }).catch(e => console.log("Error happened at posting new app: ", e))
 

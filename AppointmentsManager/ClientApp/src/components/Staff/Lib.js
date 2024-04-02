@@ -8,13 +8,13 @@ export const testData = [
 
 
 export const entry = {
-    examHall: "Test hall",
+    examHall: "Com Hall",
     lectureName: "Test Lecture Name",
     numOfStudent: 5,
     year: 1,
     semester: 2,
     subject:"EC1020",
-    academicStaff: "Test address",
+    academicStaff: " ",
     date: new Date(),
     time: formatedTimeToStr(),
     endTime: formatedTimeToStr(),
@@ -38,7 +38,7 @@ export const activeId = {
     id: 0
 }
 
-const url = "api/appointment"
+const url = "api/appointmentDrawingHall"
 
 export async function getDefault(){
     const res = await fetch(url)

@@ -24,7 +24,12 @@ export default function Appointment(props) {
         <div className="Booking_table">
         <div className={`row py-5 underline  ${props.item.deleted ? ' bc-red2' : props.item.done ? ' bc-green2' : ''}`} key={props.item.id}>
             <div className="column id">{props.item.id}</div>
-            <div className="column examHall">{props.item.examHall}</div>
+                <div className="column examHall">{props.item.examHall}</div>
+
+
+
+
+
             <div className="column lectureName">{props.item.lectureName}</div>
             <div className="column numOfStudent">{props.item.numOfStudent}</div>
             <div className="column year">{props.item.year}</div>

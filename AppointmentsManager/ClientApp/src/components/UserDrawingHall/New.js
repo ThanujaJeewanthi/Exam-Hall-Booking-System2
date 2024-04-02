@@ -1,24 +1,24 @@
 import { useState } from "react"
 import { closeModal, entry, formatedDateToStr, formatedTimeToStr, postAppointmentDrawingHall } from "./Lib"
-export default function New(props){
+export default function New(props) {
 
     const [titleLength, setTitleLength] = useState(0)
     const [desLength, setDesLength] = useState(0)
     const [addrLength, setAddrLength] = useState(0)
 
-    const newApp =(e)=> {
+    const newApp = (e) => {
         const name_ = e.target.name
         let v_ = e.target.value
 
-        if(name_ === "examHall"){
+        if (name_ === "examHall") {
             setTitleLength(v_.length)
         }
 
-        if(name_ === "lectureName"){
+        if (name_ === "lectureName") {
             setDesLength(v_.length)
         }
 
-        if (name_ === "academicStaff"){
+        if (name_ === "academicStaff") {
             setAddrLength(v_.length)
         }
 
@@ -36,21 +36,21 @@ export default function New(props){
         }
 
 
-        if(name_ === "date"){
+        if (name_ === "date") {
             v_ = new Date(v_)
         }
 
-        if(name_ === "levelOfImportance"){
+        if (name_ === "levelOfImportance") {
             v_ = Number(v_)
         }
 
         entry[name_] = v_
     }
 
-    const postApp = ()=> {
-        postAppointmentDrawingHall(entry).then(r=> {
+    const postApp = () => {
+        postAppointmentDrawingHall(entry).then(r => {
             props.refreshApp(Math.random() * 125 * Math.random())
-        }).catch(e=>console.log("Error happened at posting new app: ", e))
+        }).catch(e => console.log("Error happened at posting new app: ", e))
 
         closeModal("new-modal")
         window.location.reload();
@@ -78,14 +78,14 @@ export default function New(props){
 
         </div>
 
-        <div className="row mt-25">
+   {/*     <div className="row mt-25">
             <div>
                 <label htmlFor="AcademicStaff_n" >
                     Non  Academic   &nbsp;:</label>
                 <input type="text" id="AcademicStaff_n" name="academicStaff" onChange={newApp} maxLength={50} /><br></br>
                 <label>Staff Member</label>
             </div>
-        </div>
+        </div>*/}
         <br></br>
 
         <div className="ms-10">
@@ -95,7 +95,7 @@ export default function New(props){
                     <option value={3}>Assignment</option>
                     <option value={2}>Quiz</option>
                     <option value={1}>Mid Exam</option>
-                    <option value={0}>End Exam</option>
+                {/*    <option value={0}>End Exam</option>*/}
                     <option value={4}>Exam Type</option>
                 </select>
 
@@ -169,7 +169,7 @@ export default function New(props){
         </div>
 
             <div className="row justify-btw modal-action-container mt-15">
-                <div className="btn" onClick={()=> closeModal("new-modal")}>Cancel</div>
+                <div className="btn" onClick={() => closeModal("new-modal")}>Cancel</div>
                 <div className="btn" onClick={postApp}>Request</div>
             </div>
         </div>

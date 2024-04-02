@@ -468,3 +468,12 @@ input[type="checkbox"] {
 .Booking_table{
     max-height:300px;
 }
+
+
+.bc-hidefor02 {
+    display: none;
+}
+
+.bc-hidefor01 {
+    display: none;
+}
